@@ -13,7 +13,7 @@ There are differences between the charmed Anbox Cloud installation and the Anbox
 
 Before you start the installation, ensure that you have the required credentials and prerequisites:
 
-* An Ubuntu 22.04 LTS to run the commands (or another operating system that supports snaps - see the [Snapcraft documentation](https://snapcraft.io/docs/installing-snapd)).
+* An Ubuntu 22.04 LTS or Ubuntu noble 24.04 to run the commands (or another operating system that supports snaps - see the [Snapcraft documentation](https://snapcraft.io/docs/installing-snapd)).
 * Account credentials for one of the following public clouds:
   * [Amazon Web Services](https://aws.amazon.com/) (including AWS-China)
   * [Google Cloud platform ](https://cloud.google.com/)
@@ -136,15 +136,20 @@ Choose between the available {ref}`sec-juju-bundles`:
 
 To customize the machine configuration Juju will use for the deployment, create another overlay file. Here you can, for example, specify AWS instance types, change the size or source of the root disk or other things. See the [complete list of constraints](https://juju.is/docs/juju/constraint#heading--list-of-constraints) in the Juju documentation for details.
 
+
+```{note}
+Anbox Cloud charms supports deployment on both Ubuntu noble 24.04 and Ubuntu jammy 22.04. The examples below use **noble**. If you prefer to deploy on Ubuntu jammy 22.04, simply modify the `series` configuration accordingly.
+```
+
 For the `anbox-cloud-core` bundle, such an `overlay.yaml` file looks like this:
 
 ```
 machines:
   '0':
-    series: jammy
+    series: noble
     constraints: "instance-type=m4.xlarge root-disk=40G"
   '1':
-    series: jammy
+    series: noble
     constraints: "instance-type=m4.xlarge root-disk=40G"
 ```
 
@@ -156,13 +161,13 @@ machines:
     series: focal
     constraints: "instance-type=m4.xlarge root-disk=40G"
   '1':
-    series: jammy
+    series: noble
     constraints: "instance-type=m4.xlarge root-disk=40G"
   '2':
-    series: jammy
+    series: noble
     constraints: "instance-type=m4.xlarge root-disk=40G"
   '3':
-    series: jammy
+    series: noble
     constraints: "instance-type=m4.2xlarge root-disk=50G"
 ```
 
@@ -215,13 +220,13 @@ machines:
     series: focal
     constraints: "instance-type=m4.xlarge root-disk=40G"
   '1':
-    series: jammy
+    series: noble
     constraints: "instance-type=m4.xlarge root-disk=40G"
   '2':
-    series: jammy
+    series: noble
     constraints: "instance-type=m4.xlarge root-disk=40G"
   '3':
-    series: jammy
+    series: noble
     constraints: "instance-type=g4dn.2xlarge root-disk=50G"
 ```
 
@@ -242,7 +247,7 @@ applications:
 machines:
   ...
   '3':
-    series: jammy
+    series: noble
     constraints: "instance-type=m6g.2xlarge root-disk=50G"
 ```
 

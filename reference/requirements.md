@@ -57,7 +57,10 @@ Anbox Cloud deployments are managed by Juju. They can be created on all the [sup
 
 ### Ubuntu
 
-Charmed Anbox Cloud supports Ubuntu 22.04 (Jammy Jellyfish).
+Charmed Anbox Cloud supports the following Ubuntu versions:
+
+* Ubuntu 22.04 (Jammy Jellyfish)
+* Ubuntu 24.04 (Noble Numbat)
 
 ```{note}
 The HAProxy load balancer currently has no support for Ubuntu 22.04. Therefore, the Juju bundle uses Ubuntu 20.04 for the machine that runs the load balancer.

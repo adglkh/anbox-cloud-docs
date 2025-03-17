@@ -19,13 +19,13 @@ An [overlay bundle](https://juju.is/docs/juju/bundle) is a fragment of valid YAM
         series: focal
         constraints: "instance-type=m5.xlarge root-disk=40G"
       '1':
-        series: jammy
+        series: noble
         constraints: "instance-type=m5.xlarge root-disk=40G"
       '2':
-        series: jammy
+        series: noble
         constraints: "instance-type=g4dn.2xlarge root-disk=100G"
       '3':
-        series: jammy
+        series: noble
         constraints: "instance-type=m5.xlarge root-disk=100G"
 
 See the [Juju bundle documentation](https://canonical-charmcraft.readthedocs-hosted.com/en/stable/reference/files/bundle-yaml-file/ ) for more information about Juju's bundle format and valid YAML.
@@ -36,6 +36,9 @@ To use one or more overlay files with the Anbox Cloud bundle, specify them durin
 
 Make sure to use the correct local path and file name for your overlay file(s).
 
+```{note}
+Anbox Cloud charms supports deployment on both Ubuntu noble 24.04 and Ubuntu jammy 22.04. The examples above use **noble**. If you prefer to deploy on Ubuntu jammy 22.04, simply modify the `series` configuration accordingly.
+```
 
 ### Change configuration settings
 
