@@ -45,7 +45,6 @@ In the Streaming Stack, both the Agent and the Gateway can be run in HA. We reco
 
     juju add-unit anbox-stream-gateway -n 2
     juju add-unit anbox-stream-agent -n 2
-    juju relate anbox-stream-gateway:api anbox-stream-gateway-lb:reverseproxy
 
 This would give you 3 instances of both the Stream Gateway and the Stream Agent.
 
