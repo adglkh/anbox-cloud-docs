@@ -1,7 +1,7 @@
 (howto-share-session)=
 # Share a session
 
-A session in Anbox Cloud denotes the streaming session of an Anbox instance. Each session of an instance can be shared up to a maximum of 5 times. By default, each share will expire after 12 hours.
+A session in Anbox Cloud denotes the streaming session of an Anbox instance. Each session of an instance can be shared up to a maximum of 5 times. By default, each share will expire after 12 hours, with a maximum allowed duration of 30 days per share.
 
 ```{note}
 This guide demonstrates the steps using the appliance deployment. If you are using the charmed deployment, use `anbox-stream-gateway` instead of `anbox-cloud-appliance.gateway` in the commands.
